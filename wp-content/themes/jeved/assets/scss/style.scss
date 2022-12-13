@@ -292,6 +292,7 @@ letter-spacing: 0.05em;
 }
 .villas-slidebox {
     position: relative;
+    -webkit-mask-image: -webkit-linear-gradient(360deg, rgba(255,255,255,1.238831) 85%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%);
 }
 .villas-slider__item {
     position: relative;
@@ -668,6 +669,7 @@ letter-spacing: 0.05em;
     
 }
 @media(max-width: 1100px) {
+    .villas-slidebox {-webkit-mask-image: '';}
     .header-slider__text {
         font-size: 55px;
         line-height: 75px;

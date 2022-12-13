@@ -60,7 +60,7 @@
                     <p><?php the_field('villas-descr2') ?></p>
                 </div>
             </div>
-            <div class="villas-slidebox" > <?php /* style="-webkit-mask-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));"*/?>
+            <div class="villas-slidebox" style="-webkit-mask-image: -webkit-linear-gradient(360deg, rgba(255,255,255,1.238831) 85%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%);"> 
                 <div class="villas-slider">
 
                 <?php 

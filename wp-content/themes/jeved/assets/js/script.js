@@ -69,30 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $(".menu__list ").toggleClass("menu__list--active ");
         $(".menu__btn").toggleClass('menu__btn--active');
     })
-    var slides = document.querySelectorAll('.villas-slider .slick-slide');
-var nextbtn = document.querySelector('.villas-slider__navigation');
-slides.forEach(item => {if(item.getAttribute('aria-hidden') === 'true') {
-  item.querySelector('.villas-slider__item').classList.remove('villas-slider--active');
-  item.style.opacity = 0.3;
-} else {item.style.opacity = 1;
-}});
-
-
-
-    nextbtn.addEventListener('click', () => {
-        slides.forEach(item => {
-          if(item.getAttribute('aria-hidden') === 'true') {
-            if(item.querySelector('.villas-slider__item').classList.contains('villas-slider--active')) {item.querySelector('.villas-slider__item').classList.remove('villas-slider--active');}
-            
-            item.style.opacity = 0.3;
-          } else {
-            if(!item.querySelector('.villas-slider__item').classList.contains('villas-slider--active')) {
-              item.querySelector('.villas-slider__item').classList.add('villas-slider--active')
-            }
-            item.style.opacity = 1;
-          }
-        });
-    });
+    
 
 
 
