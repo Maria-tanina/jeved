@@ -11,7 +11,8 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'assets/js/script.js'
+        'node_modules/swiper/swiper-bundle.js',
+        'assets/js/script.js',
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -32,7 +33,7 @@ function styles() {
 }
 
 function watching (){
-    watch(['assets/css/*.css'], styles);
+    watch(['assets/scss/*.scss'], styles);
     watch(['assets/js/**/*.js', '!assets/js/main.min.js'], scripts);
 }
 

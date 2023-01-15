@@ -132,8 +132,8 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
  * Enqueue scripts and styles.
  */
 function jeved_styles() {
-	wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/assets/css/style.min.css', array());
 	wp_enqueue_style( 'libs-style', get_template_directory_uri() . '/assets/css/libs.min.css', array());
+	wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/assets/css/style.min.css', array());
 }
 add_action( 'wp_enqueue_scripts', 'jeved_styles' );
 function jeved_scripts() {
@@ -217,3 +217,35 @@ function jeved_register_post_type_villas()
     register_post_type('villas', $args);
 }
 add_action('init', 'jeved_register_post_type_villas');
+
+function jeved_register_post_type_benefits()
+{
+
+    $args = [
+        'label' => esc_html__('Benefits', 'jeved'),
+        'public' => true,
+        'show_in_menu' => true,
+        'supports' => ['title', 'thumbnail', 'custom-fields'],
+        'rewrite' => false,
+		'has_archive' => false,
+		'hierarchical' => false
+    ];
+    register_post_type('benefits', $args);
+}
+add_action('init', 'jeved_register_post_type_benefits');
+
+function jeved_register_post_type_authors()
+{
+
+    $args = [
+        'label' => esc_html__('Authors', 'jeved'),
+        'public' => true,
+        'show_in_menu' => true,
+        'supports' => ['title', 'custom-fields'],
+        'rewrite' => false,
+		'has_archive' => false,
+		'hierarchical' => false
+    ];
+    register_post_type('authors', $args);
+}
+add_action('init', 'jeved_register_post_type_authors');

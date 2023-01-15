@@ -16,10 +16,12 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-            <?php if( has_custom_logo() ): the_custom_logo(); ?>
-            <?php else: ?>
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.svg' ?>" alt="logo"></a>
-            <?php endif; ?>
+                <div class="custom-logo__box">
+                    <?php if( has_custom_logo() ): the_custom_logo(); ?>
+                    <?php else: ?>
+                    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.svg' ?>" alt="logo"></a>
+                    <?php endif; ?>
+                </div>
                 <nav class="menu">
                     <button class="menu__btn">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" width="48px" height="48px">
@@ -42,14 +44,13 @@
                       ) );
                     
                     ?>
+                    
                 </nav>
                 <div class="explore-box">
-                    <a href="#villas">
-                        <img class="explore-btn" src="<?php the_field('explore-btn') ?>" alt="">
+                    <a class="explore-link" href="#explore">
+                        <?php the_field('explore-btn'); ?>
                     </a>
                 </div>
-                
             </div>
-            <img class="decor-menu" src="<?php echo get_template_directory_uri() . '/assets/images/decor4.svg' ?>" alt="" style="margin-top: 45px;">
         </div>
     </header>
